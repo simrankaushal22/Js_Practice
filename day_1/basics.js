@@ -194,26 +194,37 @@ function reverseNumber(num) {
 }
 // console.log(reverseNumber(12345));
 
-function sumplus(n){
+function sumplus(n) {
+  let sum = 0;
 
-  let sum=0
-
-  while(n>0){
-sum+=n%10
-n=Math.floor(n/10)
-
+  while (n > 0) {
+    sum += n % 10;
+    n = Math.floor(n / 10);
   }
-  return sum
+  return sum;
 }
 // console.log(sumplus(23456));
 
-function sunplus(num){
-let sum=0
+function sunplus(num) {
+  let sum = 0;
 
-while(num>0){
-  sum+=num%10
-  num=Math.floor(num/10)
+  while (num > 0) {
+    sum += num % 10;
+    num = Math.floor(num / 10);
+  }
+  return sum;
 }
-return sum
+console.log(sunplus("12345"));
+
+function largest(num) {
+  let pal = 0;
+  while (num > 0) {
+    let digit = num % 10;
+    if (digit > pal) {
+      pal = digit;
+    }
+    num = Math.floor(num / 10);
+  }
+  return pal;
 }
-console.log(sunplus(11235));
+// console.log(largest(1263));
