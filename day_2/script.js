@@ -119,26 +119,58 @@ function repeating(str) {
 }
 // console.log(repeating("hheeloi"));
 
-
 //9. Find duplicate characters in string
 
-function duplicate(str){
-  let result=""
- for(let i= 0;i<str.length;i++){
-  let count=0
+function duplicate(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    let count = 0;
 
-  for(let j=0;j<str.length;j++){
-    if(str[j]===str[i]){
-      count ++
+    for (let j = 0; j < str.length; j++) {
+      if (str[j] === str[i]) {
+        count++;
+      }
+    }
+    if (count > 1) {
+      return result + str[i];
     }
   }
-  if(count>1){
-    return result+str[i]
-  }
-}
-return result
+  return result;
 }
 // console.log(duplicate("hheelloo"));
 
+// function abc(str1,str2){
+// str1=str1.toLowerCase();
+// str2=str2.toLowerCase();
 
+// if(str1.length!==str2.length){
+//   return false
+// }
+// let stored1=str1.split("").sort().join("")
+// let stored2=str2.split("").sort().join("")
+  
+// return stored1===stored2
+// }
+// console.log(abc("silent","listen"));
+// console.log(abc("hello","ollen"));
 
+function anagrams(str1, str2){
+  if(str1.length !== str2.length) return false
+
+  for(let i = 0; i < str1.length; i++){
+    let count1 = 0
+    let count2 = 0
+
+    for(let j = 0; j < str1.length; j++){
+      if(str1[j] === str1[i]) count1++
+      if(str2[j] === str1[i]) count2++
+    }
+
+    if(count1 !== count2){ 
+      return false         
+    }
+  }
+  return true 
+}
+console.log(anagrams("listen", "silent")); 
+console.log(anagrams("hello", "world")); 
