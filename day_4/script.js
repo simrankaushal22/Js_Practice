@@ -146,31 +146,58 @@ function duplicate(arr) {
 //   return arr;
 // }
 // console.log(sorting([7, 6, 3, 2, 1, 5, 4]));
-// 
+//
 
-function sorting(arr){
-    for(let i=0;i<arr.length-1;i++){
-        for(let j=0;j<arr.length;j++){
-            if(arr[j]>arr[j+1]){
-                let temp=arr[j]
-                arr[j]=arr[j+1]
-                arr[j+1]=temp
-            }
-        }
+function sorting(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
     }
-    return arr
+  }
+  return arr;
 }
 // console.log(sorting([3,4,6,8,1,2,3]));
 
-function duplicate(arr){
-    
-    result=[]
-    for(let i=0;i<arr.length;i++){
-        if(!result.includes(arr[i])){
-            result.push(arr[i])
-        }
+function duplicate(arr) {
+  result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      result.push(arr[i]);
     }
-    return result 
+  }
+  return result;
 }
-console.log(duplicate([2,4,6,8,5,2,5]));
+// console.log(duplicate([2,4,6,8,5,2,5]));
 
+// 14. Merge two arrays
+function merge(arr1,arr2){
+let result=[]
+
+for(let i=0;i<arr1.length;i++){
+result[result.length]=arr1[i]
+}
+for(let i=0;i<arr2.length;i++){
+  result[result.length]=arr2[i]
+}
+return result
+}
+console.log(merge([1,2,3,4,5],[6,7,8,9,10]));
+
+function merge(arr1, arr2){
+  return arr1.concat(arr2)
+}
+console.log(merge([1,2,3], [4,5,6])); 
+
+
+ function merge(arr1,arr2){
+result=[]
+
+for(let i=0;i<arr1.length;i++){
+  result[result.length]=arr1[i]
+}
+
+}
