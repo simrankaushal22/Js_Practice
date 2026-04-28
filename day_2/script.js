@@ -155,7 +155,8 @@ function duplicate(str) {
 // console.log(abc("hello","ollen"));
 
 function anagrams(str1, str2){
-  if(str1.length !== str2.length) return false
+  if(str1.length !== str2.length) 
+    return false
 
   for(let i = 0; i < str1.length; i++){
     let count1 = 0
