@@ -62,6 +62,5 @@ function duplicate(str){
     }
     return result
 }
-console.log(duplicate("siimrann"));
-
+// console.log(duplicate("siimrann"));
 
