@@ -53,6 +53,21 @@
 // }
 //  console.log(count);
 
+let fact =1;
+for(i=1;i<=5;i++){
+  fact*=i
+}
+console.log(fact);
+
+
+
+
+
+
+
+
+
+
 //7. Reverse a number
 // let n = 12345;
 // let rev = 0;
@@ -63,6 +78,9 @@
 //   n = Math.floor(n / 10);
 // }
 // console.log(rev);
+
+
+
 
 //8.Check if a number is palindrome
 // function isPalindrome(n){
